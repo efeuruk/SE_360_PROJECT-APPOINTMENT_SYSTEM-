@@ -10,9 +10,12 @@ import java.sql.*;
 public class LoginScreen implements ActionListener {
 	PersonIslemler islemler = new PersonIslemler();
 	JFrame f;
-	JTextField tf1,tf2,tf3,tf4;
+	JTextField tf1 = new JTextField();
+	JTextField tf2 = new JTextField();
+	JTextField tf3 = new JTextField();
+	JTextField tf4 = new JTextField();
+	JTextField pf1 = new JTextField();
 	//JPasswordField pf1;
-	JTextField pf1;
 	JButton b1=new JButton("Apply");
 		   
 	LoginScreen(){
@@ -29,15 +32,10 @@ public class LoginScreen implements ActionListener {
 		l4.setBounds(50,200,150,20);
 		JLabel l5=new JLabel("Password:");
 		l5.setBounds(50,250,150,20);
-		JTextField tf1=new JTextField();
 		tf1.setBounds(170,50, 150,20);
-		JTextField tf2=new JTextField();
 		tf2.setBounds(170,100, 150,20);
-		JTextField tf3=new JTextField();
 		tf3.setBounds(170,150, 150,20);
-		JTextField tf4=new JTextField();
 		tf4.setBounds(170,200, 150,20);
-		JTextField pf1=new JTextField();
 		pf1.setBounds(170,250, 150,20);
 		f.add(l1);f.add(l2);f.add(l3);f.add(l4);f.add(l5);
 		f.add(tf1);f.add(tf2);f.add(tf3);f.add(tf4);f.add(pf1);
