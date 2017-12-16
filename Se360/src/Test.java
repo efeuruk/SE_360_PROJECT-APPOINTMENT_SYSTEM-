@@ -1,8 +1,7 @@
-import javax.swing.*;  
-import java.sql.*;
-import java.awt.*;  
+import javax.swing.*; 
+import java.sql.*;  
 import java.awt.event.*;
-import java.util.Arrays;  
+ 
 
 public class Test {
 	PersonIslemler islemler = new PersonIslemler();
@@ -61,7 +60,7 @@ public class Test {
 					if (girisBasarili == true) {
 						System.out.println("Giriþ Baþarýlý");
 						girisEkrani.setVisible(false);
-						new MainScreen();
+						new DecisionScreen();
 					}
 					else {
 						System.out.println("Giriþ Baþarýsýz");

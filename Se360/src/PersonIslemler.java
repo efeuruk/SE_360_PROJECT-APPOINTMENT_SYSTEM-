@@ -22,6 +22,8 @@ public class PersonIslemler {
 		
 	}
 	
+	
+	
 	public void kaydet(String ad,String soyad,String ssn,String email,String password) throws SQLException {
 		String sorgu = "Insert into patients(ad,soyad,ssn,email,password) values (?,?,?,?,?)";
 		ps = con.prepareStatement(sorgu);
@@ -32,6 +34,35 @@ public class PersonIslemler {
 		ps.setString(5, password);
 		ps.executeUpdate();
 	}
+	
+	public void choosingClinic(int id) throws SQLException {
+		String sorgu = "Select name from clinics where id = ?";
+		ps = con.prepareStatement(sorgu);
+		ps.setInt(1, id);
+		ps.executeQuery();
+	}
+	
+	public void choosingDoctor(int id) throws SQLException {
+		String sorgu = "Select name from doctors where id = ?";
+		ps = con.prepareStatement(sorgu);
+		ps.setInt(1, id);
+		ps.executeQuery();
+	}
+	
+	public void choosingHour(int id) throws SQLException {
+		String sorgu = "Select hour from doctors where id = ?";
+		ps = con.prepareStatement(sorgu);
+		ps.setInt(1, id);
+		ps.executeQuery();
+	}
+	
+	public void choosingDay(int id) throws SQLException {
+		String sorgu = "Select day from  where id = ?";
+		ps = con.prepareStatement(sorgu);
+		ps.setInt(1, id);
+		ps.executeQuery();
+	}
+	
 	
 	public PersonIslemler() {
 		String url="jdbc:mysql://"+PersonDB.host+":"+PersonDB.port+"/"+PersonDB.db_ismi+"?useUnicode=true&characterEncoding=utf8";

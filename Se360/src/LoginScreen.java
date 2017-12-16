@@ -1,8 +1,10 @@
-import java.awt.FlowLayout;
+//import java.awt.FlowLayout;
+
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.sql.rowset.JdbcRowSet;
+//import javax.sql.rowset.JdbcRowSet;
 import javax.swing.*;
 import java.sql.*;
 
@@ -60,6 +62,8 @@ public class LoginScreen implements ActionListener {
 		} catch (SQLException e1) {
 			e1.printStackTrace();
 		}
+		f.setVisible(false);
+		new Test();
 	      
 	}
 }
